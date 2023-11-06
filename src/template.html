@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div id="app">
+        <header>
+          <nav>
+            <h1>To-Do List</h1>
+          </nav>
+        </header>
+        <main>
+          <aside id="sidebar">
+            <div class="list-container">
+              <ul>
+                <li class="home">Home</li>
+                <li class="today">Today</li>
+                <li class="upcoming">Weekly</li>
+                <li class="project">Projects</li>
+                <li class="notes">Notes</li>
+              </ul>
+            </div>
+          </aside>
+          <section>
+            <div class="main-container">
+              <div class="main-view">
+                <div class="popup">
+                  <div>
+                    <label for="title"> Title:</label>
+                    <input
+                      type="text"
+                      id="title"
+                      name="title"
+                      placeholder=" Enter Task Title"
+                      minlength="3"
+                      pattern="[A-Za-z]+"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label for="description"> Description:</label>
+                    <input
+                      type="text"
+                      id="description"
+                      name="description"
+                      placeholder=" Description: gym, running, etc"
+                      minlength="3"
+                      pattern="[A-Za-z]+"
+                      required
+                    />
+                  </div>
+                  <div class="button-container">
+                    <div class="date-priority">
+                      <div class="date">
+                        <label for="date"> Date:</label>
+                        <input type="date" id="date" name="date" required />
+                      </div>
+                      <div class="priority">
+                        <label for="priority"> Priority:</label>
+                        <select name="priority" id="priority">
+                          <option value="high" class="high">High</option>
+                          <option value="medium" class="medium">Medium</option>
+                          <option value="low" class="low">Low</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="options">
+                      <button>Add</button>
+                      <button>Edit</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer id="footer">
+        <p>Created by <a href="https://github.com/magsdevs">magsdevs</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
